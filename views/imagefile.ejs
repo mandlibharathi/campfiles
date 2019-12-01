@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+</head>
+<body>
+  
+        <div class="row">
+                <% if(records.length>0){%>
+                    <% records.forEach(function(row){%>
+                      
+                <div class="col-sm-4">
+                <img src='./uploads/<%=row.campImage %>' class="img-responsive" style="height:350px; width:400px;margin-left: 0.5em;">
+                   <strong>campName:</strong><%= row.campName %><br />
+                    <strong>desc:</strong><%= row.campDescription %>
+                   <strong>Amenities:</strong> <%=row.campAmenities %>
+                </div>
+                    
+<%}) }%>
+                
+       
+        </div>
+</body>
+</html>
